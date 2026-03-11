@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>B证继续教育刷题系统</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="app">
+    <!-- 主页 -->
+    <div id="home-screen" class="screen">
+      <h1>B证继续教育刷题系统</h1>
+      <button onclick="startReviewByType('single')">📖 单选题复习</button>
+      <button onclick="startReviewByType('multiple')">📖 多选题复习</button>
+      <button onclick="startReviewByType('true_false')">📖 判断题复习</button>
+      <button onclick="startTest()">📝 模拟测试</button>
+      <button onclick="startWrongReview()">❌ 错题复习</button>
+      <button onclick="clearWrongQuestions()" class="danger">🗑️ 清空错题本</button>
+      <!-- 新增：关闭服务器按钮 
+      <button onclick="shutdownServer()" class="danger">⏹️ 关闭服务器</button>-->
+      <div id="status"></div>
+    </div>
+
+    <!-- 复习/测试界面 -->
+    <div id="question-screen" class="screen hidden">
+      <div class="header">
+        <span id="progress"></span>
+        <span id="timer" class="timer"></span>
+      </div>
+      <div id="stem"></div>
+      <div id="options"></div>
+      <div class="btn-group">
+        <button id="prev-btn" onclick="prevQuestion()">上一题</button>
+        <button id="next-btn" onclick="nextQuestion()">下一题</button>
+        <button id="submit-btn" class="primary" onclick="submitTest()">提交试卷</button>
+        <button id="check-btn" onclick="checkAnswer()">查看答案</button>
+        <button onclick="goHome()">返回主页</button>
+      </div>
+      <div id="explanation" class="explanation hidden"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

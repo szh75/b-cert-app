@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Microsoft YaHei", sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  .screen {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .hidden { display: none; }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    background: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button:hover { opacity: 0.9; }
+  .danger { background: #e74c3c; }
+  .primary { background: #2ecc71; }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  .timer { color: #e74c3c; }
+  
+  #stem {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  .option-item {
+    margin: 8px 0;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .option-item.selected {
+    background: #d6eaf8;
+    border-color: #3498db;
+  }
+  .btn-group {
+    margin: 25px 0;
+    text-align: center;
+  }
+  .btn-group button {
+    width: auto;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .explanation {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fef9e7;
+    border-left: 4px solid #f39c12;
+    border-radius: 4px;
+  }
+  #status {
+    margin-top: 20px;
+    text-align: center;
+    color: #7f8c8d;
+  }
