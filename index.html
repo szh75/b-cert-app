@@ -3,23 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>B证继续教育刷题系统</title>
+  <title>建筑工程题库系统</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container" id="app">
     <!-- 主页 -->
     <div id="home-screen" class="screen">
-      <h1>B证继续教育刷题系统</h1>
+      <h1>建筑工程题库系统</h1>
+      <button onclick="startModule('required')">📚 建筑工程必修</button>
+      <button onclick="startModule('elective')">📖 建筑工程选修</button>
+      <button onclick="startModule('b_cert')">📜 B证继续教育</button>
+      <!-- 新增：关闭服务器按钮 -->
+      <button onclick="shutdownServer()" class="danger">⏹️ 关闭服务器</button>
+    </div>
+
+    <!-- 子模块主页 -->
+    <div id="module-screen" class="screen hidden">
+      <h1 id="module-title">模块名称</h1>
       <button onclick="startReviewByType('single')">📖 单选题复习</button>
       <button onclick="startReviewByType('multiple')">📖 多选题复习</button>
       <button onclick="startReviewByType('true_false')">📖 判断题复习</button>
       <button onclick="startTest()">📝 模拟测试</button>
       <button onclick="startWrongReview()">❌ 错题复习</button>
       <button onclick="clearWrongQuestions()" class="danger">🗑️ 清空错题本</button>
-      <!-- 新增：关闭服务器按钮 
-      <button onclick="shutdownServer()" class="danger">⏹️ 关闭服务器</button>-->
+      <!-- 新增：关闭服务器按钮 -->
+      <button onclick="shutdownServer()" class="danger">⏹️ 关闭服务器</button>
       <div id="status"></div>
+      <button onclick="goHome()" style="margin-top: 20px;">返回主菜单</button>
     </div>
 
     <!-- 复习/测试界面 -->
@@ -35,7 +46,7 @@
         <button id="next-btn" onclick="nextQuestion()">下一题</button>
         <button id="submit-btn" class="primary" onclick="submitTest()">提交试卷</button>
         <button id="check-btn" onclick="checkAnswer()">查看答案</button>
-        <button onclick="goHome()">返回主页</button>
+        <button onclick="goModuleHome()">返回模块</button>
       </div>
       <div id="explanation" class="explanation hidden"></div>
     </div>

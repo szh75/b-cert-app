@@ -11,26 +11,27 @@
   }
   .container {
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 10px auto;
+    padding: 10px;
   }
   .screen {
     background: white;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   .hidden { display: none; }
   h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #2c3e50;
+    font-size: 1.5rem;
   }
   button {
     display: block;
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 8px 0;
     border: none;
     border-radius: 6px;
     background: #3498db;
@@ -45,46 +46,99 @@
   .header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: bold;
+    flex-wrap: wrap;
   }
   .timer { color: #e74c3c; }
   
   #stem {
-    font-size: 18px;
-    margin-bottom: 20px;
-    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
   }
   .option-item {
-    margin: 8px 0;
+    margin: 6px 0;
     padding: 10px;
     background: #f8f9fa;
     border: 1px solid #ddd;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 15px;
   }
   .option-item.selected {
     background: #d6eaf8;
     border-color: #3498db;
   }
   .btn-group {
-    margin: 25px 0;
+    margin: 20px 0;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
   }
   .btn-group button {
     width: auto;
     display: inline-block;
-    margin: 0 5px;
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 14px;
   }
   .explanation {
-    margin-top: 20px;
-    padding: 15px;
+    margin-top: 15px;
+    padding: 12px;
     background: #fef9e7;
     border-left: 4px solid #f39c12;
     border-radius: 4px;
+    font-size: 14px;
   }
   #status {
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
     color: #7f8c8d;
+    font-size: 14px;
+  }
+
+  /* 手机适配 */
+  @media (max-width: 600px) {
+    .container {
+      margin: 5px auto;
+      padding: 5px;
+    }
+    .screen {
+      padding: 15px;
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px;
+      margin: 6px 0;
+      font-size: 15px;
+    }
+    #stem {
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .option-item {
+      padding: 8px;
+      font-size: 14px;
+    }
+    .btn-group {
+      margin: 15px 0;
+    }
+    .btn-group button {
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+    .explanation {
+      padding: 10px;
+      font-size: 13px;
+    }
+    #status {
+      font-size: 13px;
+    }
   }
